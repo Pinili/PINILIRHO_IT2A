@@ -1,11 +1,10 @@
 
 from collections import deque
 
-name = "PINILI"
+name = input("Enter a word/last name: ").strip().upper()
 queue = deque()
 
-print("Enter a word/last name:", name)
-print()
+print("\n--- ENQUEUING LETTERS ---")
 
 # ENQUEUE
 for letter in name:
@@ -13,7 +12,9 @@ for letter in name:
     rear = len(queue) - 1
     print(f"Enqueued: {letter}   (rear = {rear})")
 
-print()
+print("\nQueue:", list(queue))
+
+print("\n--- DEQUEUING LETTERS ---")
 
 # DEQUEUE
 front = 0
@@ -23,5 +24,4 @@ while queue:
     front += 1
     print(f"Dequeued: {letter}   (front = {front})")
 
-print()
-print("Queue is now empty.")
+print("\nQueue is now empty.")
